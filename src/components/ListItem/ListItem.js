@@ -1,13 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, Touchable} from 'react-native'
 
 
-const listItem = (prop)=>(
-
-    <View style={styles.listItem}>
-        <Text>{prop.placeName}</Text>
+const listItem = (props)=>(
+    <Touchable onPress={props.onItemPressed}>
+    <View style={styles.listItem} >
+        <Text>{props.placeName}</Text>
     </View>
-
+    </Touchable>
 
 
 
